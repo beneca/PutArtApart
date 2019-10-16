@@ -1,0 +1,6 @@
+ng build --base-href=/PutArtClient/ per buildare front, da mettere in una cartella PutArtClient su tomcat
+link: http://www.thejavageek.com/2018/01/04/deploying-angular-app-tomcat/
+
+e poi aggiungo il war del back
+
+http://localhost:8080/PutArtClient/
