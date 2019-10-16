@@ -1,0 +1,9 @@
+<div class="container">
+  <label>Where are you? (City) </label>
+  <input type="text" #event />
+  <button type="button" (click)="searchArtworks(event.value)">Search</button>
+</div>
+
+<div>
+  <app-artworks [city]="city"></app-artworks>
+</div>

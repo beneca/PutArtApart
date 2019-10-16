@@ -1,0 +1,24 @@
+div.container button {
+  background-color: wheat;
+  border: none;
+  color: black;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  font-family: "Franklin Gothic Medium";
+}
+
+div.container input {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: "Franklin Gothic Medium";
+  font-size: 15px;
+}
+
+div.container label {
+  margin-right: 5px;
+  font-family: "Franklin Gothic Medium";
+  font-size: 15px;
+}

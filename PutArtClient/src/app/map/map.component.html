@@ -1,0 +1,52 @@
+<div *ngIf="artwork">
+  {{ errore }}
+  <div *ngIf="museo != null">
+    <p>
+      The orange point is the museum {{ museo.name }} that conatins
+      {{ artwork }}
+    </p>
+
+    {{ museo.longitude }}
+    {{ museo.latitude }}
+    <aol-map *ngIf="museo != null">
+      <aol-interaction-default></aol-interaction-default>
+      <aol-view [zoom]="15">
+        <aol-coordinate
+          [x]="museo.longitude"
+          [y]="museo.latitude"
+          [srid]="'EPSG:4326'"
+        ></aol-coordinate>
+      </aol-view>
+
+      <aol-layer-tile [opacity]="opacity">
+        <aol-source-osm></aol-source-osm>
+      </aol-layer-tile>
+
+      <aol-layer-vector [opacity]="opacity">
+        <aol-source-vector>
+          <aol-feature>
+            <aol-geometry-point>
+              <aol-coordinate
+                [x]="museo.longitude"
+                [y]="museo.latitude"
+                [srid]="'EPSG:4326'"
+              ></aol-coordinate>
+            </aol-geometry-point>
+            <aol-style>
+              <aol-style-circle [radius]="10">
+                <aol-style-stroke
+                  [color]="'black'"
+                  [width]="width"
+                ></aol-style-stroke>
+                <aol-style-fill [color]="'orange'"></aol-style-fill>
+              </aol-style-circle>
+            </aol-style>
+          </aol-feature>
+        </aol-source-vector>
+      </aol-layer-vector>
+    </aol-map>
+    <!-- <agm-map [latitude]="museo.latitude" [longitude]="museo.longitude">
+      <agm-marker [latitude]="museo.latitude" [longitude]="museo.longitude"></agm-marker>
+    </agm-map> -->
+  </div>
+</div>
