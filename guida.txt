@@ -1,6 +1,27 @@
-ng build --base-href=/PutArtClient/ per buildare front, da mettere in una cartella PutArtClient su tomcat
-link: http://www.thejavageek.com/2018/01/04/deploying-angular-app-tomcat/
+Link per scaricare progetto --> https://github.com/beneca/PutArtApart.git
 
-e poi aggiungo il war del back
+IN LOCALE:
+- da eclipse:
+	- importare maven project PutArtApart
+	- update maven project (dovrebbe farlo automaticamente eclipse)
+	- creare server (tomcat o altro)
+	- add PutArtApart
+	- startare server
+- da cmd:
+	- cd path cartella PutArtClient
+	- npm install
+	- ng serve --open
+	- ...chiamata ad angular, si apre la webapp
 
-http://localhost:8080/PutArtClient/
+
+SU TOMCAT: --> directory PutArtTomcat
+nella directory webapp: 
+	- copiare il war PutArtApart.war
+	- copiare la cartella PutArtClient
+	- startare tomcat
+da browser chiamare: http://localhost:8080/PutArtClient/
+
+
+
+PER BUILDARE ANGULAR E METTERLO SU TOMMY:
+ng build --base-href=/PutArtClient/

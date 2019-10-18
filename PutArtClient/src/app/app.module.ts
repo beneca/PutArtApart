@@ -22,7 +22,7 @@ import { AngularOpenlayersModule } from "ngx-openlayers";
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyAKHIINgquWns_TcUx12vSBtCT7_KF3DIU"
+      apiKey: ""
     }),
     AppRoutingModule,
     AngularOpenlayersModule,
