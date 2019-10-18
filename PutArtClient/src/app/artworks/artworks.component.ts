@@ -44,9 +44,14 @@ export class ArtworksComponent implements OnChanges {
     this.artwork = null;
     this.artService.getArtworks(this.city).subscribe(artworks => {
       this.artworksList = artworks;
+      //if(artworks.length = 0) {
+      //  this.artwork="Non ci sono opere d'arte in questa città!";
+      //}
       console.log(this.artworksList);
     },
-    error => {this.artwork="Non ci sono opere d'arte in questa città!"});
+    error => {
+      //this.artworksList = [];
+      this.artwork="Non ci sono opere d'arte in questa città!"});
   }
 
   go(event) {

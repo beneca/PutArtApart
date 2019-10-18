@@ -20,7 +20,7 @@ public class WebConfig implements WebMvcConfigurer {
 
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 
-		viewResolver.setPrefix("/WEB-INF/jsp/");
+		viewResolver.setPrefix("/WEB-INF/");
 		viewResolver.setSuffix(".jsp");
 		
 		return viewResolver;

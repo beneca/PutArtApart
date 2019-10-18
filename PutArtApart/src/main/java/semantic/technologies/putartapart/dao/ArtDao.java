@@ -41,9 +41,17 @@ public class ArtDao extends AbstractDao {
 	public List<String> searchArtworksByCity(String city) {
 		LOG.debug("chiamata ArtDao.searchArtworksByCity con città: " + city);		
 		List<String> artworks = new ArrayList<>();
+		String cityFinal = "";
 		
-		city = city.substring(0,1).toUpperCase() + city.substring(1,city.length()).toLowerCase();
-		
+		String[] tokenC = city.split(" ");
+		if (tokenC.length == 1) {
+			cityFinal = city.substring(0,1).toUpperCase() + city.substring(1,city.length()).toLowerCase();
+		} else {
+			cityFinal = tokenC[0].substring(0,1).toUpperCase() + tokenC[0].substring(1,tokenC[0].length()).toLowerCase();
+			for(int i = 1; i < tokenC.length; i++) {
+				cityFinal = cityFinal.concat("_").concat(tokenC[i].substring(0,1).toUpperCase() + tokenC[i].substring(1,tokenC[i].length()).toLowerCase());
+			}
+		}
 
 //		ParameterizedSparqlString queryStr = new ParameterizedSparqlString();
 //		queryStr.setNsPrefix("dbo", "http://skunkworks.example.com/redacted#");
@@ -63,7 +71,7 @@ public class ArtDao extends AbstractDao {
 //
 //		Query q = queryStr.asQuery();
 		
-		Query query = QueryFactory.create(QUERY_ARTWORK_BY_CITY.concat(city).concat(CHIUSURA_QUERY_1));
+		Query query = QueryFactory.create(QUERY_ARTWORK_BY_CITY.concat(cityFinal).concat(CHIUSURA_QUERY_1));
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(ENDPOINT_DB_PEDIA, query);
 	    ResultSet results = qexec.execSelect();
 
@@ -92,7 +100,8 @@ public class ArtDao extends AbstractDao {
 		
 		String museo = s.get("?mus").toString();
 		String[] tokenM = museo.split("/");
-		museum.setName(tokenM[tokenM.length - 1]);
+		String name = tokenM[tokenM.length - 1].replaceAll("_", " ");
+		museum.setName(name);
 		
 		String longitudine = s.get("?lg").toString();
 		String[] tokenLong = longitudine.split("\\^");
