@@ -15,14 +15,14 @@ export class MapComponent implements OnChanges {
   constructor(private artService: ArtService) {}
 
   ngOnChanges() {
-    console.log(this.artwork);
+    // console.log(this.artwork);
     this.museo = null;
     this.errore = null;
     
     if(this.artwork != null) {
       this.artService.getMuseum(this.artwork).subscribe(data => {
         this.museo = data;
-        console.log("lat: " + this.museo.latitude + ", long: " + this.museo.longitude);
+        // console.log("lat: " + this.museo.latitude + ", long: " + this.museo.longitude);
       },
       error => {this.errore="Non ho trovato corrispondenze per l'opera d'arte!"});
     }

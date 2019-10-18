@@ -12,7 +12,7 @@ export class SearchComponent {
   private city: string
 
   searchArtworks(event) {
-    console.log(event);
+    // console.log(event);
     this.city = event;
   }
 

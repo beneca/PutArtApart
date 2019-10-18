@@ -15,14 +15,10 @@ div ul li {
   font-family: "Franklin Gothic Medium";
   font-size: 15px;
 }
+
 div ul {
   margin-top: 30px;
   margin-left: 15px;
   margin-bottom: 30px;
   list-style-type: none;
 }
-/*
-ul li:before {
-  content: "✓";
-}
-*/

@@ -1,13 +1,9 @@
 <div *ngIf="city">
-  <!--{{ city }}-->
   <ul>
     <li *ngFor="let art of artworksList">
       <button (click)="go(art)">GO</button>
       {{ art }}
     </li>
   </ul>
-  <!-- <p *ngIf="artwork">
-      {{ artwork }}
-  </p> -->
   <app-map [artwork]="artwork"></app-map>
 </div>

@@ -5,9 +5,8 @@
       The orange point is the museum {{ museo.name }} that contains
       {{ artwork }}
     </p>
-
-    {{ museo.longitude }}
-    {{ museo.latitude }}
+    lat: {{ museo.latitude }},
+    long: {{ museo.longitude }}
     <aol-map *ngIf="museo != null">
       <aol-interaction-default></aol-interaction-default>
       <aol-view [zoom]="15">

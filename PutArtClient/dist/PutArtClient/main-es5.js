@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div *ngIf=\"city\">\n  <!--{{ city }}-->\n  <ul>\n    <li *ngFor=\"let art of artworksList\">\n      <button (click)=\"go(art)\">GO</button>\n      {{ art }}\n    </li>\n  </ul>\n  <!-- <p *ngIf=\"artwork\">\n      {{ artwork }}\n  </p> -->\n  <app-map [artwork]=\"artwork\"></app-map>\n</div>\n";
+    __webpack_exports__["default"] = "<div *ngIf=\"city\">\n  <ul>\n    <li *ngFor=\"let art of artworksList\">\n      <button (click)=\"go(art)\">GO</button>\n      {{ art }}\n    </li>\n  </ul>\n  <app-map [artwork]=\"artwork\"></app-map>\n</div>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div *ngIf=\"artwork\">\n  {{ errore }}\n  <div *ngIf=\"museo != null\">\n    <p>\n      The orange point is the museum {{ museo.name }} that contains\n      {{ artwork }}\n    </p>\n\n    {{ museo.longitude }}\n    {{ museo.latitude }}\n    <aol-map *ngIf=\"museo != null\">\n      <aol-interaction-default></aol-interaction-default>\n      <aol-view [zoom]=\"15\">\n        <aol-coordinate\n          [x]=\"museo.longitude\"\n          [y]=\"museo.latitude\"\n          [srid]=\"'EPSG:4326'\"\n        ></aol-coordinate>\n      </aol-view>\n\n      <aol-layer-tile [opacity]=\"opacity\">\n        <aol-source-osm></aol-source-osm>\n      </aol-layer-tile>\n\n      <aol-layer-vector [opacity]=\"opacity\">\n        <aol-source-vector>\n          <aol-feature>\n            <aol-geometry-point>\n              <aol-coordinate\n                [x]=\"museo.longitude\"\n                [y]=\"museo.latitude\"\n                [srid]=\"'EPSG:4326'\"\n              ></aol-coordinate>\n            </aol-geometry-point>\n            <aol-style>\n              <aol-style-circle [radius]=\"10\">\n                <aol-style-stroke\n                  [color]=\"'black'\"\n                  [width]=\"width\"\n                ></aol-style-stroke>\n                <aol-style-fill [color]=\"'orange'\"></aol-style-fill>\n              </aol-style-circle>\n            </aol-style>\n          </aol-feature>\n        </aol-source-vector>\n      </aol-layer-vector>\n    </aol-map>\n    <!-- <agm-map [latitude]=\"museo.latitude\" [longitude]=\"museo.longitude\">\n      <agm-marker [latitude]=\"museo.latitude\" [longitude]=\"museo.longitude\"></agm-marker>\n    </agm-map> -->\n  </div>\n</div>";
+    __webpack_exports__["default"] = "<div *ngIf=\"artwork\">\n  {{ errore }}\n  <div *ngIf=\"museo != null\">\n    <p>\n      The orange point is the museum {{ museo.name }} that contains\n      {{ artwork }}\n    </p>\n    lat: {{ museo.latitude }},\n    long: {{ museo.longitude }}\n    <aol-map *ngIf=\"museo != null\">\n      <aol-interaction-default></aol-interaction-default>\n      <aol-view [zoom]=\"15\">\n        <aol-coordinate\n          [x]=\"museo.longitude\"\n          [y]=\"museo.latitude\"\n          [srid]=\"'EPSG:4326'\"\n        ></aol-coordinate>\n      </aol-view>\n\n      <aol-layer-tile [opacity]=\"opacity\">\n        <aol-source-osm></aol-source-osm>\n      </aol-layer-tile>\n\n      <aol-layer-vector [opacity]=\"opacity\">\n        <aol-source-vector>\n          <aol-feature>\n            <aol-geometry-point>\n              <aol-coordinate\n                [x]=\"museo.longitude\"\n                [y]=\"museo.latitude\"\n                [srid]=\"'EPSG:4326'\"\n              ></aol-coordinate>\n            </aol-geometry-point>\n            <aol-style>\n              <aol-style-circle [radius]=\"10\">\n                <aol-style-stroke\n                  [color]=\"'black'\"\n                  [width]=\"width\"\n                ></aol-style-stroke>\n                <aol-style-fill [color]=\"'orange'\"></aol-style-fill>\n              </aol-style-circle>\n            </aol-style>\n          </aol-feature>\n        </aol-source-vector>\n      </aol-layer-vector>\n    </aol-map>\n    <!-- <agm-map [latitude]=\"museo.latitude\" [longitude]=\"museo.longitude\">\n      <agm-marker [latitude]=\"museo.latitude\" [longitude]=\"museo.longitude\"></agm-marker>\n    </agm-map> -->\n  </div>\n</div>";
     /***/
   },
 
@@ -943,7 +943,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "div ul li button {\n  background-color: wheat;\n  border: none;\n  color: black;\n  padding: 5px 12px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 10px;\n  font-family: \"Franklin Gothic Medium\";\n  margin-right: 10px;\n}\n\ndiv ul li {\n  font-family: \"Franklin Gothic Medium\";\n  font-size: 15px;\n}\n\ndiv ul {\n  margin-top: 30px;\n  margin-left: 15px;\n  margin-bottom: 30px;\n  list-style-type: none;\n}\n\n/*\nul li:before {\n  content: \"✓\";\n}\n*/\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJ0d29ya3MvYXJ0d29ya3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLHFCQUFxQjtFQUNyQixlQUFlO0VBQ2YscUNBQXFDO0VBQ3JDLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHFDQUFxQztFQUNyQyxlQUFlO0FBQ2pCOztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixtQkFBbUI7RUFDbkIscUJBQXFCO0FBQ3ZCOztBQUNBOzs7O0NBSUMiLCJmaWxlIjoic3JjL2FwcC9hcnR3b3Jrcy9hcnR3b3Jrcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2IHVsIGxpIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoZWF0O1xuICBib3JkZXI6IG5vbmU7XG4gIGNvbG9yOiBibGFjaztcbiAgcGFkZGluZzogNXB4IDEycHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGZvbnQtc2l6ZTogMTBweDtcbiAgZm9udC1mYW1pbHk6IFwiRnJhbmtsaW4gR290aGljIE1lZGl1bVwiO1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbmRpdiB1bCBsaSB7XG4gIGZvbnQtZmFtaWx5OiBcIkZyYW5rbGluIEdvdGhpYyBNZWRpdW1cIjtcbiAgZm9udC1zaXplOiAxNXB4O1xufVxuZGl2IHVsIHtcbiAgbWFyZ2luLXRvcDogMzBweDtcbiAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbn1cbi8qXG51bCBsaTpiZWZvcmUge1xuICBjb250ZW50OiBcIuKck1wiO1xufVxuKi9cbiJdfQ== */";
+    __webpack_exports__["default"] = "div ul li button {\n  background-color: wheat;\n  border: none;\n  color: black;\n  padding: 5px 12px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 10px;\n  font-family: \"Franklin Gothic Medium\";\n  margin-right: 10px;\n}\n\ndiv ul li {\n  font-family: \"Franklin Gothic Medium\";\n  font-size: 15px;\n}\n\ndiv ul {\n  margin-top: 30px;\n  margin-left: 15px;\n  margin-bottom: 30px;\n  list-style-type: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJ0d29ya3MvYXJ0d29ya3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLHFCQUFxQjtFQUNyQixlQUFlO0VBQ2YscUNBQXFDO0VBQ3JDLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHFDQUFxQztFQUNyQyxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixtQkFBbUI7RUFDbkIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvYXJ0d29ya3MvYXJ0d29ya3MuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdiB1bCBsaSBidXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGVhdDtcbiAgYm9yZGVyOiBub25lO1xuICBjb2xvcjogYmxhY2s7XG4gIHBhZGRpbmc6IDVweCAxMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBmb250LXNpemU6IDEwcHg7XG4gIGZvbnQtZmFtaWx5OiBcIkZyYW5rbGluIEdvdGhpYyBNZWRpdW1cIjtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xufVxuXG5kaXYgdWwgbGkge1xuICBmb250LWZhbWlseTogXCJGcmFua2xpbiBHb3RoaWMgTWVkaXVtXCI7XG4gIGZvbnQtc2l6ZTogMTVweDtcbn1cblxuZGl2IHVsIHtcbiAgbWFyZ2luLXRvcDogMzBweDtcbiAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbn0iXX0= */";
     /***/
   },
 
@@ -999,24 +999,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnChanges() {
           var _this = this;
 
-          console.log(this.city);
-          console.log(this.artworksList);
+          // console.log(this.city);
+          // console.log(this.artworksList);
           this.artwork = null;
+          this.artworksList = null;
           this.artService.getArtworks(this.city).subscribe(function (artworks) {
-            _this.artworksList = artworks; //if(artworks.length = 0) {
-            //  this.artwork="Non ci sono opere d'arte in questa città!";
-            //}
-
-            console.log(_this.artworksList);
+            _this.artworksList = artworks; // console.log(this.artworksList);
           }, function (error) {
-            //this.artworksList = [];
+            // this.artworksList = [];
             _this.artwork = "Non ci sono opere d'arte in questa città!";
           });
         }
       }, {
         key: "go",
         value: function go(event) {
-          console.log(event);
+          // console.log(event);
           this.artwork = event;
         }
       }]);
@@ -1194,14 +1191,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnChanges() {
           var _this2 = this;
 
-          console.log(this.artwork);
+          // console.log(this.artwork);
           this.museo = null;
           this.errore = null;
 
           if (this.artwork != null) {
             this.artService.getMuseum(this.artwork).subscribe(function (data) {
-              _this2.museo = data;
-              console.log("lat: " + _this2.museo.latitude + ", long: " + _this2.museo.longitude);
+              _this2.museo = data; // console.log("lat: " + this.museo.latitude + ", long: " + this.museo.longitude);
             }, function (error) {
               _this2.errore = "Non ho trovato corrispondenze per l'opera d'arte!";
             });
@@ -1293,7 +1289,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SearchComponent, [{
         key: "searchArtworks",
         value: function searchArtworks(event) {
-          console.log(event);
+          // console.log(event);
           this.city = event;
         }
       }]);
